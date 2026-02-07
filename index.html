@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Álbum de la Boda</title>
+</head>
+<body>
+
+  <main class="upload-container">
+    <h2>Compartí tu recuerdo 💕</h2>
+    <p>
+      Ayudanos a capturar este día desde todos los ángulos.
+    </p>
+
+    <input
+      type="file"
+      id="photoInput"
+      accept="image/*"
+      capture="environment"
+    />
+
+    <button id="uploadBtn">
+      Subir foto 📸
+    </button>
+
+    <p id="status"></p>
+  </main>
+
+  <script src="upload.js"></script>
+</body>
+</html>
