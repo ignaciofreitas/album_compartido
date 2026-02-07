@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Álbum de la Boda</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,437;1,437&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Álbum de la Boda</title>
 </head>
+
 <body>
 
-  <main class="upload-container">
-    <h2>Compartí tu recuerdo 💕</h2>
-    <p>
-      Ayudanos a capturar este día desde todos los ángulos.
-    </p>
+    <main class="upload-container">
+        <h2>Compartí tu recuerdo 💕</h2>
+        <p>
+            Ayudanos a capturar este día desde todos los ángulos.
+        </p>
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <button id="selectPhotoBtn" type="button" class="select-btn">
+            Seleccionar una foto
+                        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M9 4l1.5-2h3L15 4h4a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h4zm3 5a5 5 0 100 10 5 5 0 000-10z" />
+            </svg>
+        </button>
+        <div id="previewContainer" class="hidden">
+            <img id="photoPreview" alt="Preview" />
 
-    <input
-      type="file"
-      id="photoInput"
-      accept="image/*"
-    />
+            <div class="preview-actions">
+                <button id="changePhotoBtn" type="button" class="btn-secondary">
+                    ❌ Elegir otra
+                </button>
 
-    <button id="uploadBtn">
-      Subir foto 📸
-    </button>
+                <button id="uploadBtn" type="button" class="btn-primary">
+                    ✔ Subir foto
+                </button>
+            </div>
 
-    <p id="status"></p>
-  </main>
+            <!-- 🔥 Loader abajo de los botones -->
+            <div id="loader" class="loader hidden"></div>
+        </div>
 
-  <script src="upload.js"></script>
+        <p id="status"></p>
+    </main>
+
+    <script src="upload.js"></script>
 </body>
+
 </html>
